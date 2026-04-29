@@ -19,13 +19,13 @@ Read **`fleet-platform-api`** first. Paths: **`/platform/v1/users`**.
 - **List:** `{ "data": [ … ], "meta" }`
 - **Get / create / patch / delete:** `{ "data": { … } }` — create returns **201**.
 
-**`UserDetail`** includes **`id`**, **`company_id`** (metadata from Fleet), **`email`**, profile fields, **`role`** (`EMPLOYEE` \| `ADMIN`). Full model: **OpenAPI**.
+**`UserDetail`** includes **`id`**, **`email`**, profile fields, **`role`** (`EMPLOYEE` \| `ADMIN`). Full model: **OpenAPI**.
 
 ## WRITE
 
 | GET | POST / PATCH / DELETE |
-|-----|------------------------|
-| no | yes |
+| --- | --------------------- |
+| no  | yes                   |
 
 ## Operations (concepts)
 

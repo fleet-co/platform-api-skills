@@ -12,7 +12,7 @@ description: >-
 ## Base URL
 
 - **Production API**: `https://api.fleet.co` — all platform routes are under **`/platform/v1`** (example: `https://api.fleet.co/platform/v1/devices`).
-- **Sandbox / staging**: use the base URL Fleet provides for your environment (same path prefix **`/platform/v1`**).
+- **Sandbox**: `https://demo-api.fleet.co`
 
 ## Contract (OpenAPI)
 
