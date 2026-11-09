@@ -20,8 +20,8 @@ Read **`fleet-platform-api`**. Routes are **`/platform/v1/catalog/...`** — all
 
 ## Endpoints (paths only)
 
-1. `GET /catalog/product-groups` — required **`delivery_country`**; optional **`category`**, **`brand`**, **`search`**; pagination (default **`limit`** often **20**).
-2. `GET /catalog/product-groups/:product_group_id/products` — required **`delivery_country`**.
-3. `GET /catalog/products/:product_id/pricing` — required **`delivery_country`**, **`currency`**, **`acquisition_mode`**; optional **`keyboard_layout`** when required for that product.
+1. `GET /catalog/product-groups` — required **`delivery_country`**; optional **`category`**, **`brand`** (lowercase slug, any brand accepted), **`search`**; pagination (default **`limit`** **20**).
+2. `GET /catalog/product-groups/:product_group_id/products` — required **`delivery_country`**; returns every product at once (`{ data }`, no `meta`).
+3. `GET /catalog/products/:product_id/pricing` — required **`delivery_country`**, **`currency`** (use the company currency from `GET /company`), **`acquisition_mode`**; optional **`keyboard_layout`** when required for that product. **`amount`** is the monthly rent for `LEASING`, the one-time price for `BUY`.
 
 **Errors (examples):** `DELIVERY_COUNTRY_NOT_FOUND`, `PRODUCT_NOT_FOUND`, `KEYBOARD_LAYOUT_REQUIRED`, `PRODUCT_PRICING_UNAVAILABLE`.
